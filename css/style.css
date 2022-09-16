@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css?family=Codystar:300&display=swap');
+
+body {
+    background-color: #000000;
+
+}
+h1 {
+    padding-top: 10px;
+    font-family: 'Codystar';
+    font-size: 5rem;
+    text-align: center;
+     font-weight: bold;
+    -webkit-animation: glow 2s ease-in-out infinite alternate;
+    -moz-animation: glow 2s ease-in-out infinite alternate;
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+  
+  @-webkit-keyframes glow {
+       from {
+        color: #fff;
+      text-shadow: 0 0 10px #00fff2, 0 0 20px #00fff2, 0 0 30px #00fff2, 0 0 40px #00fff2, 0 0 50px #00fff2, 0 0 60px #00fff2, 0 0 70px #00fff2, 0 0 90px #00fff2;
+    }
+    
+    to {
+       color: gray;
+      text-shadow: 0 0 20px #00fff2, 0 0 30px #00fff2, 0 0 40px #00fff2, 0 0 50px #00fff2, 0 0 60px #00fff2, 0 0 70px #00fff2, 0 0 80px #00fff2, 0 1 90px #00fff2;
+    }
+  }
+
+.container {
+    font-family: Arial, Helvetica, sans-serif;
+    max-width: 3000px;
+    height: 640px;
+    
+    margin: auto;
+    background-image: url(./churrasco.jpg);
+    background-size: 100%;
+    padding: 20px;
+    border-radius: 10px;
+}
+.inputBox
+{
+    margin-left:auto;
+    margin-right:auto ;
+    margin-bottom: 20px;
+    bottom: 5%;
+    position: relative;
+    width: 250px;
+
+}
+
+.inputBox input
+{
+
+    width: 100%;
+    background: transparent;
+    color: #fff;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    font-size: 1em;
+    letter-spacing: 0.1em;
+    padding: 10px 0 5px;
+}
+.inputBox span
+{
+    position: absolute;
+    left: 0;
+    padding: 10px 0 5px;
+    color: #00fff2;
+    text-transform: uppercase;
+    pointer-events: none;
+    letter-spacing: 0.5em;
+    transition: 0.5s;
+
+}
+.inputBox input:valid ~ span,
+.inputBox input:focus ~ span
+{
+    color: #fff;
+    transform: translateY(-16px);
+    font-size: 0.65em;
+
+}
+.inputBox i
+{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    overflow: hidden;
+
+}
+.inputBox i::before
+{
+    content: '';
+    position: absolute;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg,#c2ff1b,rgb(2, 124, 33),#2196f3,#27b082,#36ff1b);
+    animation: animate 2s linear infinite;
+    transition: 0.5s;
+}
+.inputBox input:valid ~ i::before,
+.inputBox input:focus ~ i::before
+{
+    left: 0;
+}
+@keyframes animate
+{
+    0%
+    {
+        background-position-x: 0 ;
+    }
+    100%
+    {
+        background-position-x: 250px;
+    }
+}
+
+
+#resultado { 
+    position: absolute;
+    top: 25%; left: 70%;
+    flex-direction: column;
+    padding-top: 10px;
+    font-family: 'Codystar';
+    font-size: 2rem;
+    text-align: center;
+     font-weight: bold;
+    -webkit-animation: glow ease-in-out infinite alternate;
+    -moz-animation: glow ease-in-out infinite alternate;
+    animation: glow 1000s ease-in-out infinite alternate;
+  @-webkit-keyframes glow {
+       from {
+        color: #fff;
+      text-shadow: 0 0 10px #00fff2, 0 0 20px #00fff2, 0 0 30px #00fff2, 0 0 40px #00fff2, 0 0 50px #00fff2, 0 0 60px #00fff2, 0 0 70px #00fff2, 0 0 90px #00fff2;
+    }
+    
+    to {
+       color: gray;
+      text-shadow: 0 0 20px #00fff2, 0 0 30px #00fff2, 0 0 40px #00fff2, 0 0 50px #00fff2, 0 0 60px #00fff2, 0 0 70px #00fff2, 0 0 80px #00fff2, 0 1 90px #00fff2;
+    }
+  }
+}
+@media (max-width:1500px) {
+    .container {
+        height: 860px
+    }
+}
+@media (max-width:1300px) {
+   .container{
+    height: 800px;}
+}
+@media (max-width: 1200px) {
+
+h1 
+{
+    padding-bottom: 5px;
+  
+      
+}
+
+.container
+{
+    height: 788px;
+}
+#resultado
+{
+    font-size: 20px;
+    position: inherit;
+}
+}
+@media (max-width: 950px) {
+    .container{
+    height: 990px;
+}
+    #resultado{
+        font-size: 40px;
+    }
+}
+@media (max-width: 912px){
+    .container{
+    height: 1080px;}
+}
+@media (max-width: 700px) {
+    h1 {
+        font-size: 50px;
+        padding-bottom: 50px ;
+
+    }
+    
+}
+@media (max-width: 500px) {
+    #resultado {
+        font-size: 30px;
+    }
+    h1 {
+        font-size: 40px;
+        padding-bottom: 50px;
+    }
+    .container
+{
+    height: 896px;
+}
+}
+@media (max-width: 400px) {
+    h1 {
+        font-size: 20px;
+    }
+    
+    
+}
+@media (max-width: 280px) {
+    #resultado {
+        font-size: 20px;
+    }
+    ul li .fa {
+        font-size: 4em;
+    }
+}
